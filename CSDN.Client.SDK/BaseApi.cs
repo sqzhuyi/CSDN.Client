@@ -50,7 +50,9 @@ namespace CSDN.Client.SDK
 
             SocketHelper socket = new SocketHelper(new Uri(api_host + shortUri));
 
-            return socket.Post(data, true);
+            string result = socket.Post(data, true);
+
+            return result;
         }
 
         protected string GetValue(string name, string json)

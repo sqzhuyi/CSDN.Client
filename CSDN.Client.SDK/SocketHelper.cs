@@ -127,7 +127,7 @@ Content-Length: {3}
 
                 if (receive)
                 {
-                    byte[] receive_data = new byte[4096];
+                    byte[] receive_data = new byte[10240];
                     client.Receive(receive_data, SocketFlags.None);
 
                     result = Encoding.UTF8.GetString(receive_data);
